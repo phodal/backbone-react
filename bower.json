@@ -7,7 +7,12 @@
     "backbone": "~1.1.0",
     "requirejs": "~2.1.10",
     "requirejs-text": "~2.0.10",
-    "modernizr": "~2.7.1"
+    "modernizr": "~2.7.1",
+    "react.backbone": "~0.6.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "react": "~0.13.1",
+    "requirejs-plugins": "~1.0.3",
+    "jsx-requirejs-plugin": "~0.6.0"
+  }
 }
