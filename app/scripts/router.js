@@ -4,21 +4,31 @@ define([
     'underscore',
     'backbone',
     'react',
-    'jsx!component/BarComponent',
-    'jsx!component/FooComponent'
-],function(_, Backbone, React, BarComponent, FooComponent){
+    'jsx!component/IndexComponent',
+    'jsx!component/AboutComponent',
+    'jsx!component/ProductComponent',
+    'jsx!component/ProjectComponent'
+],function(_, Backbone, React, IndexComponent, AboutComponent, ProductComponent, ProjectComponent){
     var AppRouter = Backbone.Router.extend({
-        bar: function(){
-            React.render( <BarComponent />, document.getElementById('root'));
+        index: function(){
+            React.render( <IndexComponent />, document.getElementById('main_content'));
         },
-        foo: function(){
-            React.render( <FooComponent />, document.getElementById('root'));
+        about: function(){
+            React.render( <AboutComponent />, document.getElementById('main_content'));
+        },
+        product: function(){
+            React.render( <ProductComponent />, document.getElementById('main_content'));
+        },
+        project: function(){
+            React.render( <ProjectComponent />, document.getElementById('main_content'));
         },
         initialize: function() {
             var router = this,
                 routes = [
-                    [ /^.*$/, "bar" ],
-                    [ "foo", "foo" ]
+                    [ /^.*$/, "index" ],
+                    [ "about", "about" ],
+                    [ "product", "product" ],
+                    [ "project", "project" ]
                 ];
 
             _.each(routes, function(route) {

@@ -5,20 +5,33 @@
     <title>BackboneReact</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="bower_components/pure/pure-min.css"/>
     <link rel="stylesheet" href="bower_components/pure/grids-responsive-old-ie-min.css">
+    <link rel="stylesheet" href="styles/main.css">
     <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
-
+<div class="monav">
+    <button id="menu" type="button" class="btn navbar-toggle" >
+        <a id="menu" href="#sidr"> ☰ 菜单</a>
+        <span class="header">墨颀CMS</span>
+    </button>
+</div>
+<div id="sidr" style="display:none" class="pure-menu-horizontal">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/product">Product</a></li>
+        <li><a href="#/project">关于项目</a></li>
+    </ul>
+</div>
 <div class="banner">
     <h1 class="banner-head">
         Simple & Stupid.
     </h1>
 </div>
 <div id="content" class="l-content">
-    <div id="root" class="l-content main">
+    <div id="main_content" class="l-content main">
 
     </div>
 </div>
