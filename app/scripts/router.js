@@ -4,23 +4,25 @@ define([
     'underscore',
     'backbone',
     'react',
-    'jsx!component/BarComponent'
-],function(_, Backbone, React, BarComponent){
+    'jsx!component/BarComponent',
+    'jsx!component/FooComponent'
+],function(_, Backbone, React, BarComponent, FooComponent){
     var AppRouter = Backbone.Router.extend({
-        index: function(){
-            return <BarComponent />;
+        bar: function(){
+            React.render( <BarComponent />, document.getElementById('root'));
+        },
+        foo: function(){
+            React.render( <FooComponent />, document.getElementById('root'));
         },
         initialize: function() {
             var router = this,
                 routes = [
-                    [ /^.*$/, "index" ]
-                    //[ "admin", "admin" ]
+                    [ /^.*$/, "bar" ],
+                    [ "foo", "foo" ]
                 ];
 
             _.each(routes, function(route) {
-                console.log(route);
-                React.render(router.index(), document.getElementById('root'));
-                router.route.apply(router,route);
+                router.route.apply(router, route);
             });
             Backbone.history.start();
         }

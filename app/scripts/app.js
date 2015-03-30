@@ -5,8 +5,7 @@ define([
 ], function (Backbone, React, Router) {
 
     var initialize = function () {
-        var router = new Router();
-        router.initialize();
+        new Router();
     };
 
     return {
