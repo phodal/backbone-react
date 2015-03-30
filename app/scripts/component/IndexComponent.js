@@ -1,11 +1,13 @@
 "use strict";
 
 define([
-    'react'
-],function(React){
+    'react',
+    'mdown!../../info/about.md'
+],function(React, about){
     var IndexComponent = React.createClass({
         render : function() {
-            return <div>Index</div>;
+            this.info = about;
+            return (<div className="content" dangerouslySetInnerHTML={{__html: about}}></div>);
         }
     });
 

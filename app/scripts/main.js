@@ -13,7 +13,10 @@ require.config({
         jsx: "../bower_components/jsx-requirejs-plugin/js/jsx",
         'react.backbone': '../bower_components/react.backbone/react.backbone',
         backbone: '../bower_components/backbone/backbone',
-        underscore: '../bower_components/lodash/dist/lodash'
+        underscore: '../bower_components/lodash/dist/lodash',
+        json: '../bower_components/requirejs-plugins/src/json',
+        mdown: '../bower_components/requirejs-plugins/src/mdown',
+        markdownConverter: '../bower_components/requirejs-plugins/lib/Markdown.Converter'
     },
     shim: {
         jquerySidr:["jquery"],
