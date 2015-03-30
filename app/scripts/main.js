@@ -17,8 +17,7 @@ require.config({
 });
 
 require([
-    'backbone', 'jsx!app', 'react'
-], function (Backbone, App, React) {
+    'backbone', 'jsx!app'
+], function (Backbone, App) {
     App.initialize();
-    Backbone.history.start();
 });

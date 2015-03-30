@@ -1,19 +1,12 @@
 "use strict";
 
 define([
-    'backbone', 'react', 'react.backbone'
-], function (Backbone, React) {
+    'backbone', 'react', 'jsx!router', 'react.backbone'
+], function (Backbone, React, Router) {
 
     var initialize = function () {
-        var App = React.createBackboneClass({
-            render: function () {
-                return (
-                    <div>
-                        <h1>hello</h1>
-                    </div>);
-            }
-        });
-        React.render(<App />, document.getElementById('root'));
+        var router = new Router();
+        router.initialize();
     };
 
     return {
