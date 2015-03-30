@@ -1,8 +1,431 @@
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
 body {
-    background: #fafafa;
+    color: #526066;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
+h2, h3 {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.l-content {
+    margin: 0 auto;
+}
+
+.l-box {
+    padding: 0.5em 2em;
+}
+
+.pure-menu {
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+
+.banner {
+    background: transparent url('../images/banner.jpg') 0 0 no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/banner.jpg', sizingMethod='scale');
+
+    height: 200px;
+    width: 100%;
+    margin-bottom: 3em;
+    display: table;
+}
+
+.banner-head {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 2em;
+    color: white;
+    font-weight: 500;
+    text-shadow: 0 1px 1px black;
+}
+
+
+
+/*
+ * -- PRICING TABLE WRAPPER --
+ * This element wraps up all the pricing table elements
+ */
+.pricing-tables,
+.information {
+    max-width: 980px;
+    margin: 0 auto;
+}
+.pricing-tables {
+    margin-bottom: 3.125em;
+    text-align: center;
+}
+
+/*
+ * -- PRICING TABLE  --
+ * Every pricing table has the .pricing-table class
+ */
+.pricing-table {
+    border: 1px solid #ddd;
+    margin: 0 0.5em 2em;
+    padding: 0 0 3em;
+}
+
+/*
+ * -- PRICING TABLE HEADER COLORS --
+ * Choose a different color based on the type of pricing table.
+ */
+.pricing-table-free .pricing-table-header {
+    background: #519251;
+}
+
+.pricing-table-biz .pricing-table-header {
+    background: #2c4985;
+}
+
+/*
+ * -- PRICING TABLE HEADER --
+ * By default, a header is black/white, and has some styles for its <h2> name.
+ */
+.pricing-table-header {
+    background: #111;
+    color: #fff;
+}
+.pricing-table-header h2 {
+    margin: 0;
+    padding-top: 2em;
+    font-size: 1em;
+    font-weight: normal;
+
+}
+
+
+/*
+ * -- PRICING TABLE PRICE --
+ * Styles for the price and the corresponding <span>per month</span>
+ */
+.pricing-table-price {
+    font-size: 6em;
+    margin: 0.2em 0 0;
+    font-weight: 100;
+}
+.pricing-table-price span {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.2em;
+    padding-bottom: 2em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    *color: #fff;
+}
+
+
+
+/*
+ * -- PRICING TABLE LIST --
+ * Each pricing table has a <ul> which is denoted by the .pricing-table-list class
+ */
+.pricing-table-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+/*
+ * -- PRICING TABLE LIST ELEMENTS --
+ * Styles for the individual list elements within each pricing table
+ */
+.pricing-table-list li {
+    padding: 0.8em 0;
+    background: #f7f7f7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.button-choose {
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    border-radius: 2em;
+    font-weight: bold;
+    position: relative;
+    bottom: -1.5em;
+}
+
+.information-head {
+    color: black;
+    font-weight: 500;
+}
+
+.footer {
+    background: #111;
+    color: #888;
+    text-align: center;
+}
+.footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+@media(min-width: 767px) {
+
+    .banner-head {
+        font-size: 4em;
+    }
+    .pricing-table {
+        margin-bottom: 0;
+    }
+
+}
+
+@media (min-width: 480px) {
+    .banner {
+        height: 400px;
+    }
+    .banner-head {
+        font-size: 3em;
+    }
+}
+
+.sidr {
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 999999;
+    width: 260px;
+    overflow-x: none;
+    overflow-y: auto;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-size: 15px;
+    background: #f8f8f8;
+    color: #333;
+    -webkit-box-shadow: inset 0 0 5px 5px #ebebeb;
+    -moz-box-shadow: inset 0 0 5px 5px #ebebeb;
+    box-shadow: inset 0 0 5px 5px #ebebeb
+}
+.sidr .sidr-inner {
+    padding: 0 0 15px
+}
+.sidr .sidr-inner>p {
+    margin-left: 15px;
+    margin-right: 15px
+}
+.sidr.right {
+    left: auto;
+    right: -260px
+}
+.sidr.left {
+    left: -260px;
+    right: auto
+}
+.sidr h1, .sidr h2, .sidr h3, .sidr h4, .sidr h5, .sidr h6 {
+    font-size: 11px;
+    font-weight: normal;
+    padding: 0 15px;
+    margin: 0 0 5px;
+    color: #333;
+    line-height: 24px;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dfdfdf));
+    background-image: -webkit-linear-gradient(#ffffff, #dfdfdf);
+    background-image: -moz-linear-gradient(#ffffff, #dfdfdf);
+    background-image: -o-linear-gradient(#ffffff, #dfdfdf);
+    background-image: linear-gradient(#ffffff, #dfdfdf);
+    -webkit-box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.2)
+}
+.sidr p {
+    font-size: 13px;
+    margin: 0 0 12px
+}
+.sidr p a {
+    color: rgba(51, 51, 51, 0.9)
+}
+.sidr>p {
+    margin-left: 15px;
+    margin-right: 15px
+}
+.sidr ul {
+    display: block;
+    margin: 0 0 15px;
+    padding: 0;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #fff
+}
+.sidr ul li {
+    display: block;
+    margin: 0;
+    line-height: 48px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #dfdfdf
+}
+.sidr ul li:hover, .sidr ul li.active, .sidr ul li.sidr-class-active {
+    border-top: none;
+    line-height: 49px
+}
+.sidr ul li:hover>a, .sidr ul li:hover>span, .sidr ul li.active>a, .sidr ul li.active>span, .sidr ul li.sidr-class-active>a, .sidr ul li.sidr-class-active>span {
+    -webkit-box-shadow: inset 0 0 15px 3px #ebebeb;
+    -moz-box-shadow: inset 0 0 15px 3px #ebebeb;
+    box-shadow: inset 0 0 15px 3px #ebebeb
+}
+.sidr ul li a, .sidr ul li span {
+    padding: 0 15px;
+    display: block;
+    text-decoration: none;
+    color: #333
+}
+.sidr ul li ul {
+    border-bottom: none;
+    margin: 0
+}
+.sidr ul li ul li {
+    line-height: 40px;
+    font-size: 13px
+}
+.sidr ul li ul li:last-child {
+    border-bottom: none
+}
+.sidr ul li ul li:hover, .sidr ul li ul li.active, .sidr ul li ul li.sidr-class-active {
+    border-top: none;
+    line-height: 41px
+}
+.sidr ul li ul li:hover>a, .sidr ul li ul li:hover>span, .sidr ul li ul li.active>a, .sidr ul li ul li.active>span, .sidr ul li ul li.sidr-class-active>a, .sidr ul li ul li.sidr-class-active>span {
+    -webkit-box-shadow: inset 0 0 15px 3px #ebebeb;
+    -moz-box-shadow: inset 0 0 15px 3px #ebebeb;
+    box-shadow: inset 0 0 15px 3px #ebebeb
+}
+.sidr ul li ul li a, .sidr ul li ul li span {
+    color: rgba(51, 51, 51, 0.8);
+    padding-left: 30px
+}
+.sidr form {
+    margin: 0 15px
+}
+.sidr label {
+    font-size: 13px
+}
+.sidr input[type="text"], .sidr input[type="password"], .sidr input[type="date"], .sidr input[type="datetime"], .sidr input[type="email"], .sidr input[type="number"], .sidr input[type="search"], .sidr input[type="tel"], .sidr input[type="time"], .sidr input[type="url"], .sidr textarea, .sidr select {
+    width: 100%;
+    font-size: 13px;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 0 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    border: none;
+    background: rgba(0, 0, 0, 0.1);
+    color: rgba(51, 51, 51, 0.6);
+    display: block;
+    clear: both
+}
+.sidr input[type=checkbox] {
+    width: auto;
+    display: inline;
+    clear: none
+}
+.sidr input[type=button], .sidr input[type=submit] {
+    color: #f8f8f8;
+    background: #333
+}
+.sidr input[type=button]:hover, .sidr input[type=submit]:hover {
+    background: rgba(51, 51, 51, 0.9)
+}
+
+.blogPosts a {
+    text-decoration: none;
+    color:#195A94;
+}
+.blogPosts .date{
+    color: #48A682;
+    font-size: 11px;
+    line-height: 1.5em;
+    margin-bottom: 0px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ccc;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+.btn{
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-toggle {
+    position: relative;
+    float: left;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width:100%;
+}
+a#menu {
+    text-decoration: none;
+    color: #333;
+    float:left;
+}
+.header{
+    color: #888;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.monav{
+    position: fixed;
+    background-color: #fff;
+    width:100%;
+    box-shadow: 0 2px 1px rgba(0,0,0, 0.10);
+}
+.main {
+    width: 960px;
 }
