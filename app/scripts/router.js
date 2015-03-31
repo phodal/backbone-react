@@ -10,7 +10,7 @@ define([
     'jsx!component/ProjectComponent',
     'jsx!component/LibraryComponent',
     'model/UserModel',
-    'data/libraries',
+    'data/libraries'
 ],function(_, Backbone, React, IndexComponent, AboutComponent, ProductComponent, ProjectComponent, LibraryComponent, UserModel, libraries){
     var AppRouter = Backbone.Router.extend({
         index: function(){

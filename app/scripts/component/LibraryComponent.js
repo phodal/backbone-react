@@ -28,7 +28,7 @@ define([
 
             }
 
-            return <div>
+            return <div id="library">
                 <input type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="Type here" />
 
                 <ul>

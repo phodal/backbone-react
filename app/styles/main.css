@@ -444,7 +444,7 @@ input[type=text]{
     margin: 0 auto 20px;
 }
 
-ul{
+#library ul{
     padding: 0;
     list-style: none;
     margin: 0 auto;
@@ -452,7 +452,7 @@ ul{
     text-align: left;
 }
 
-ul li{
+#library ul li{
     display: block;
     padding: 15px 20px;
     background-color: #F8F8F8;
@@ -462,7 +462,7 @@ ul li{
     transition: 0.3s;
 }
 
-ul li a{
+#library ul li a{
     position: absolute;
     left: 160px;
     font-size: 12px;
@@ -470,6 +470,31 @@ ul li a{
     color: #969d9d;
 }
 
-ul li:hover{
+#library ul li:hover{
     background-color:#d8f2f1;
+}
+
+#sidr ul{
+    list-style:none;
+}
+
+#sidr ul li a{
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+#sidr ul li{
+    cursor:pointer;
+    background-color:#eee;
+    color:#7B8585;
+    transition:0.3s;
+}
+
+#sidr ul li:hover{
+    background-color:#beecea;
+}
+
+#sidr ul li.focused{
+    color:#fff;
+    background-color:#41c7c2;
 }
