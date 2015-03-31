@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 define([
     'react',
@@ -7,7 +7,7 @@ define([
     var IndexComponent = React.createClass({
         render : function() {
             this.info = about;
-            return (<div className="content" dangerouslySetInnerHTML={{__html: about}}></div>);
+            return (<div className='content' dangerouslySetInnerHTML={{__html: about}}></div>);
         }
     });
 

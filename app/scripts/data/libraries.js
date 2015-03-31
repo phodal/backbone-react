@@ -1,5 +1,6 @@
-define(function () {
+'use strict';
 
+define(function () {
     var libraries = [
         { name: 'Backbone.js', url: 'http://documentcloud.github.io/backbone/'},
         { name: 'AngularJS', url: 'https://angularjs.org/'},

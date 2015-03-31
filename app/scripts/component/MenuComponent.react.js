@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 define([
     'react',
@@ -20,14 +20,14 @@ define([
                 <div>
                     <ul>{ this.props.navs.map(function(nav, index){
                         var style = '',
-                            url = "#" + nav.name;
+                            url = '#' + nav.name;
 
-                        if(self.state.focused == index){
+                        if(self.state.focused === index){
                             style = 'focused';
                         }
 
                         return  <li className={style} onClick={self.clicked.bind(self, index)}>
-                                    <a href={url}>{nav.alias_name}</a>
+                                    <a href={url}>{nav.aliasName}</a>
                                 </li>;
                     }) }
                     </ul>

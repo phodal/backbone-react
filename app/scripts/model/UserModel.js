@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 define(['backbone'], function(Backbone) {
     var UserModel = Backbone.Model.extend({

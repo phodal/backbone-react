@@ -1,4 +1,3 @@
-/*global require*/
 'use strict';
 
 require.config({
@@ -8,8 +7,8 @@ require.config({
         touchwipe: 'vendor/jquery.touchwipe.min',
 
         react: '../bower_components/react/react-with-addons',
-        "JSXTransformer": "../bower_components/react/JSXTransformer",
-        jsx: "../bower_components/jsx-requirejs-plugin/js/jsx",
+        "JSXTransformer": '../bower_components/react/JSXTransformer',
+        jsx: '../bower_components/jsx-requirejs-plugin/js/jsx',
         'react.backbone': '../bower_components/react.backbone/react.backbone',
 
         backbone: '../bower_components/backbone/backbone',
@@ -21,8 +20,8 @@ require.config({
         markdownConverter: '../bower_components/requirejs-plugins/lib/Markdown.Converter'
     },
     shim: {
-        jquerySidr:["jquery"],
-        touchwipe: ["jquery"],
+        jquerySidr:['jquery'],
+        touchwipe: ['jquery'],
         underscore: {
             exports: '_'
         }

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 define(['backbone', '../model/LibraryModel'], function(Backbone, LibraryModel) {
     var LibraryCollection = Backbone.Collection.extend({

@@ -1,11 +1,8 @@
-"use strict";
+'use strict';
 
 define([
     'react',
-    '../model/LibraryModel',
-    '../collection/LibraryCollection'
-], function (React, LibraryModel, LibraryCollection) {
-
+], function (React) {
     var LibraryComponent = React.createClass({
         getInitialState: function () {
             return {searchString: ''};
@@ -26,15 +23,15 @@ define([
                 });
             }
 
-            return <div id="library">
-                <input type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="Type here" />
+            return <div id='library'>
+                <input type='text' value={this.state.searchString} onChange={this.handleChange} placeholder='Type here' />
 
                 <ul>
                         {
                             libraries.map(function (l) {
                                 return  <li>{l.name}
                                             <a href={l.url}>{l.url}</a>
-                                        </li>
+                                        </li>;
                             })
                         }
                 </ul>

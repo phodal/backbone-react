@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 define([
     'underscore',
@@ -28,17 +28,17 @@ define([
         project: function(){
             var user = new UserModel({name: 'phodal'});
             var UserView = React.createFactory(ProjectComponent);
-            var userView = UserView({model: user});
+            var userView = new UserView({model: user});
             React.render(userView, document.getElementById('main_content'));
         },
         initialize: function() {
             var router = this,
                 routes = [
-                    [ /^.*$/, "index" ],
-                    [ "about", "about" ],
-                    [ "product", "product" ],
-                    [ "project", "project" ],
-                    [ "library", "library" ]
+                    [ /^.*$/, 'index' ],
+                    [ 'about', 'about' ],
+                    [ 'product', 'product' ],
+                    [ 'project', 'project' ],
+                    [ 'library', 'library' ]
                 ];
 
             _.each(routes, function(route) {
