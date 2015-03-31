@@ -1,11 +1,17 @@
 "use strict";
 
 define([
-    'react'
-],function(React){
+    'react',
+    'jsx!../component/ProjectComponent',
+    'jsx!../component/IndexComponent'
+],function(React, ProjectComponent, IndexComponent){
     var ProductComponent = React.createClass({
         render : function() {
-            return <div>Product</div>;
+            return (
+                <div>
+                    <ProjectComponent />
+                    <IndexComponent />
+                </div>);
         }
     });
 
