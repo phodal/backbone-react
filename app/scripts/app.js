@@ -24,7 +24,25 @@ define([
             });
         });
 
-        React.render(<MenuComponent items={['home', 'about', 'product', 'library']} />, document.getElementById('sidr'));
+        var navigations = [
+            {
+                name: 'home',
+                alias_name: '首页'
+            },
+            {
+                name: 'about',
+                alias_name: '关于'
+            },
+            {
+                name: 'product',
+                alias_name: '产品'
+            },
+            {
+                name: 'library',
+                alias_name: '库'
+            }
+        ];
+        React.render(<MenuComponent navs={navigations}/>, document.getElementById('sidr'));
         new Router();
     };
 

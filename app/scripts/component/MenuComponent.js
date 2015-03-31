@@ -18,16 +18,16 @@ define([
             var self = this;
             return (
                 <div>
-                    <ul>{ this.props.items.map(function(m, index){
+                    <ul>{ this.props.navs.map(function(nav, index){
                         var style = '',
-                            url = "#" + m;
+                            url = "#" + nav.name;
 
                         if(self.state.focused == index){
                             style = 'focused';
                         }
 
                         return  <li className={style} onClick={self.clicked.bind(self, index)}>
-                                    <a href={url}>{m}</a>
+                                    <a href={url}>{nav.alias_name}</a>
                                 </li>;
                     }) }
                     </ul>
