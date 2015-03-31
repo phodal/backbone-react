@@ -7,8 +7,9 @@ define([
     'jsx!component/IndexComponent',
     'jsx!component/AboutComponent',
     'jsx!component/ProductComponent',
-    'jsx!component/ProjectComponent'
-],function(_, Backbone, React, IndexComponent, AboutComponent, ProductComponent, ProjectComponent){
+    'jsx!component/ProjectComponent',
+    'model/UserModel'
+],function(_, Backbone, React, IndexComponent, AboutComponent, ProductComponent, ProjectComponent, UserModel){
     var AppRouter = Backbone.Router.extend({
         index: function(){
             React.render( <IndexComponent />, document.getElementById('main_content'));
@@ -20,7 +21,10 @@ define([
             React.render( <ProductComponent />, document.getElementById('main_content'));
         },
         project: function(){
-            React.render( <ProjectComponent />, document.getElementById('main_content'));
+            var user = new UserModel({name: 'phodal'});
+            var UserView = React.createFactory(ProjectComponent);
+            var userView = UserView({model: user});
+            React.render(userView, document.getElementById('main_content'));
         },
         initialize: function() {
             var router = this,
