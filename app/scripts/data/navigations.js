@@ -4,11 +4,11 @@ define(function () {
     var navigations = [
         {
             name: 'home',
-            aliasName: '首页'
+            aliasName: 'Home'
         },
         {
             name: 'about',
-            aliasName: '关于'
+            aliasName: 'About'
         },
         {
             name: 'product',
@@ -16,7 +16,7 @@ define(function () {
         },
         {
             name: 'library',
-            aliasName: '库'
+            aliasName: 'Library'
         }
     ];
 
