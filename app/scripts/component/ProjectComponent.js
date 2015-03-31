@@ -1,7 +1,8 @@
 "use strict";
 
 define([
-    'react'
+    'react',
+    'react.backbone'
 ],function(React){
     var ProjectComponent = React.createBackboneClass({
         changeOptions: "change:name",

@@ -6,7 +6,6 @@ define([
     '../collection/LibraryCollection'
 ], function (React, LibraryModel, LibraryCollection) {
 
-
     var LibraryComponent = React.createClass({
         getInitialState: function () {
             return {searchString: ''};
