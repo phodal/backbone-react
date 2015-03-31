@@ -2,14 +2,15 @@
 
 define([
     'react',
-    'jsx!../component/ProjectComponent',
+    '../model/UserModel',
+    'jsx!../component/AboutComponent',
     'jsx!../component/IndexComponent'
-],function(React, ProjectComponent, IndexComponent){
+],function(React, UserModel, AboutComponent, IndexComponent){
     var ProductComponent = React.createClass({
         render : function() {
             return (
                 <div>
-                    <ProjectComponent />
+                    <AboutComponent />
                     <IndexComponent />
                 </div>);
         }
