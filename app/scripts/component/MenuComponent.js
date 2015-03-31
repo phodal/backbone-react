@@ -11,6 +11,7 @@ define([
 
         clicked: function(index){
             this.setState({focused: index});
+            $.sidr('close');
         },
 
         render: function() {
@@ -25,12 +26,7 @@ define([
                             style = 'focused';
                         }
 
-	                    var bind = function () {
-                            self.clicked.bind(self, index);
-                            $.sidr('close');
-                        };
-
-                        return  <li className={style} onClick={ bind}>
+                        return  <li className={style} onClick={self.clicked.bind(self, index)}>
                                     <a href={url}>{m}</a>
                                 </li>;
                     }) }
