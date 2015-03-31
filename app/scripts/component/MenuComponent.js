@@ -1,8 +1,9 @@
 "use strict";
 
 define([
-    'react'
-],function(React){
+    'react',
+    'jquery'
+],function(React, $){
     var MenuComponent = React.createClass({
         getInitialState: function(){
             return { focused: 0 };
@@ -24,7 +25,12 @@ define([
                             style = 'focused';
                         }
 
-                        return  <li className={style} onClick={self.clicked.bind(self, index)}>
+	                    var bind = function () {
+                            self.clicked.bind(self, index);
+                            $.sidr('close');
+                        };
+
+                        return  <li className={style} onClick={ bind}>
                                     <a href={url}>{m}</a>
                                 </li>;
                     }) }

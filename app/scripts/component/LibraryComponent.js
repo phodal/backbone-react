@@ -25,7 +25,6 @@ define([
                 libraries = libraries.filter(function (l) {
                     return l.name.toLowerCase().match(searchString);
                 });
-
             }
 
             return <div id="library">
