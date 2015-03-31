@@ -4,11 +4,11 @@ define([
     'underscore',
     'backbone',
     'react',
-    'jsx!component/IndexComponent',
-    'jsx!component/AboutComponent',
-    'jsx!component/ProductComponent',
-    'jsx!component/ProjectComponent',
-    'jsx!component/LibraryComponent',
+    'jsx!component/IndexComponent.react',
+    'jsx!component/AboutComponent.react',
+    'jsx!component/ProductComponent.react',
+    'jsx!component/ProjectComponent.react',
+    'jsx!component/LibraryComponent.react',
     'model/UserModel',
     'data/libraries'
 ],function(_, Backbone, React, IndexComponent, AboutComponent, ProductComponent, ProjectComponent, LibraryComponent, UserModel, libraries){

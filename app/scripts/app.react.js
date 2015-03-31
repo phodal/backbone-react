@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
 define([
-    'backbone', 'react', 'jsx!router', 'react.backbone', 'jquery', 'jquerySidr', 'touchwipe',
-    'jsx!component/MenuComponent',
+    'backbone', 'react', 'jsx!router.react', 'react.backbone', 'jquery', 'jquerySidr', 'touchwipe',
+    'jsx!component/MenuComponent.react',
     'data/navigations'
 ], function (Backbone, React, Router, ReactBackbone, $, jquerySidr, touchwipe, MenuComponent, navigations) {
 
@@ -19,7 +19,7 @@ define([
         $(document).ready(function() {
             $('#sidr').show();
             $('#menu').sidr();
-            $("#sidr ul li a" ).bind('touchstart click', function() {
+            $('#sidr').find('ul li a' ).bind('touchstart click', function() {
                 $.sidr('close');
                 window.scrollTo(0,0);
             });

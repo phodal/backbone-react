@@ -30,7 +30,7 @@ require.config({
 });
 
 require([
-    'backbone', 'jsx!app'
+    'backbone', 'jsx!app.react'
 ], function (Backbone, App) {
     App.initialize();
 });

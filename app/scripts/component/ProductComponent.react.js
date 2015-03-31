@@ -3,8 +3,8 @@
 define([
     'react',
     '../model/UserModel',
-    'jsx!../component/AboutComponent',
-    'jsx!../component/IndexComponent'
+    'jsx!../component/AboutComponent.react',
+    'jsx!../component/IndexComponent.react'
 ],function(React, UserModel, AboutComponent, IndexComponent){
     var ProductComponent = React.createClass({
         render : function() {
