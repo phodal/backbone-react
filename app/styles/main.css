@@ -429,3 +429,47 @@ a#menu {
 .main {
     width: 960px;
 }
+
+input[type=text]{
+    text-align: center;
+    font: inherit;
+    border: 4px solid #a3d8d6;
+    padding: 12px 12px;
+    font-size: 15px;
+    box-shadow: 0 1px 1px #DDD;
+    width: 384px;
+    outline: none;
+    display: block;
+    color: #7B8585;
+    margin: 0 auto 20px;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+    margin: 0 auto;
+    width: 420px;
+    text-align: left;
+}
+
+ul li{
+    display: block;
+    padding: 15px 20px;
+    background-color: #F8F8F8;
+    color: #7B8585;
+    margin-bottom: 3px;
+    position: relative;
+    transition: 0.3s;
+}
+
+ul li a{
+    position: absolute;
+    left: 160px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #969d9d;
+}
+
+ul li:hover{
+    background-color:#d8f2f1;
+}

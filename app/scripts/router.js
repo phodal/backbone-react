@@ -8,8 +8,10 @@ define([
     'jsx!component/AboutComponent',
     'jsx!component/ProductComponent',
     'jsx!component/ProjectComponent',
-    'model/UserModel'
-],function(_, Backbone, React, IndexComponent, AboutComponent, ProductComponent, ProjectComponent, UserModel){
+    'jsx!component/LibraryComponent',
+    'model/UserModel',
+    'data/libraries',
+],function(_, Backbone, React, IndexComponent, AboutComponent, ProductComponent, ProjectComponent, LibraryComponent, UserModel, libraries){
     var AppRouter = Backbone.Router.extend({
         index: function(){
             React.render( <IndexComponent />, document.getElementById('main_content'));
@@ -19,6 +21,9 @@ define([
         },
         product: function(){
             React.render( <ProductComponent />, document.getElementById('main_content'));
+        },
+        library: function(){
+            React.render( <LibraryComponent items={libraries} />, document.getElementById('main_content'));
         },
         project: function(){
             var user = new UserModel({name: 'phodal'});
@@ -32,7 +37,8 @@ define([
                     [ /^.*$/, "index" ],
                     [ "about", "about" ],
                     [ "product", "product" ],
-                    [ "project", "project" ]
+                    [ "project", "project" ],
+                    [ "library", "library" ]
                 ];
 
             _.each(routes, function(route) {
