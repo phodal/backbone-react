@@ -32,7 +32,7 @@ define([
             React.render(userView, document.getElementById('main_content'));
         },
         initialize: function() {
-            var router = this,
+            var self = this,
                 routes = [
                     [ /^.*$/, 'index' ],
                     [ 'about', 'about' ],
@@ -42,7 +42,7 @@ define([
                 ];
 
             _.each(routes, function(route) {
-                router.route.apply(router, route);
+                self.route.apply(self, route);
             });
             Backbone.history.start();
         }
