@@ -4,31 +4,31 @@ define([
     'react',
     'jquery'
 ],function(React, $){
-    var MenuComponent = React.createClass({
-        getInitialState: function(){
-            return { focused: 0 };
+    return React.createClass({
+        getInitialState: function () {
+            return {focused: 0};
         },
 
-        clicked: function(index){
+        clicked: function (index) {
             this.setState({focused: index});
             $.sidr('close');
         },
 
-        render: function() {
+        render: function () {
             var self = this;
             return (
                 <div>
-                    <ul>{ this.props.navs.map(function(nav, index){
+                    <ul>{ this.props.navs.map(function (nav, index) {
                         var style = '',
                             url = '#' + nav.name;
 
-                        if(self.state.focused === index){
+                        if (self.state.focused === index) {
                             style = 'focused';
                         }
 
-                        return  <li className={style} onClick={self.clicked.bind(self, index)}>
-                                    <a href={url}>{nav.aliasName}</a>
-                                </li>;
+                        return <li className={style} onClick={self.clicked.bind(self, index)}>
+                            <a href={url}>{nav.aliasName}</a>
+                        </li>;
                     }) }
                     </ul>
                 </div>
@@ -36,6 +36,4 @@ define([
 
         }
     });
-
-    return MenuComponent;
 });

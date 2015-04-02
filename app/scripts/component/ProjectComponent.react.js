@@ -4,9 +4,9 @@ define([
     'react',
     'react.backbone'
 ],function(React){
-    var ProjectComponent = React.createBackboneClass({
+    return React.createBackboneClass({
         changeOptions: 'change:name',
-        render : function() {
+        render: function () {
             return (
                 <div>
                     <h1>{this.getModel().get('name')}</h1>
@@ -14,6 +14,4 @@ define([
                 </div>);
         }
     });
-
-    return ProjectComponent;
 });

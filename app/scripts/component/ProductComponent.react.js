@@ -5,8 +5,8 @@ define([
     'jsx!../component/AboutComponent.react',
     'jsx!../component/IndexComponent.react'
 ],function(React, AboutComponent, IndexComponent){
-    var ProductComponent = React.createClass({
-        render : function() {
+    return React.createClass({
+        render: function () {
             return (
                 <div>
                     <AboutComponent />
@@ -14,6 +14,4 @@ define([
                 </div>);
         }
     });
-
-    return ProductComponent;
 });
