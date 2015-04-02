@@ -49,6 +49,9 @@ h2, h3 {
     background: #111;
     color: #888;
     text-align: center;
+    bottom: 0px;
+    width: 100%;
+    position: absolute;
 }
 .footer a {
     color: #ddd;
