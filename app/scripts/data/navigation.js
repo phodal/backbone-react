@@ -1,7 +1,7 @@
 'use strict';
 
 define(function () {
-    var navigations = [
+    return [
         {
             name: 'home',
             aliasName: 'Home'
@@ -17,8 +17,10 @@ define(function () {
         {
             name: 'library',
             aliasName: 'Library'
+        },
+        {
+            name: 'project',
+            aliasName: 'Project'
         }
     ];
-
-    return navigations;
 });

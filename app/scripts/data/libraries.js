@@ -1,7 +1,7 @@
 'use strict';
 
 define(function () {
-    var libraries = [
+    return [
         { name: 'Backbone.js', url: 'http://documentcloud.github.io/backbone/'},
         { name: 'AngularJS', url: 'https://angularjs.org/'},
         { name: 'jQuery', url: 'http://jquery.com/'},
@@ -17,6 +17,4 @@ define(function () {
         { name: 'Express', url: 'http://expressjs.com/'},
         { name: 'Koa', url: 'http://koajs.com/'}
     ];
-
-	return libraries;
 });
