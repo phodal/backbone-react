@@ -5,7 +5,9 @@ define([
 ],function(React){
     return React.createClass({
         render: function () {
-            return <div>About</div>;
+            return  <div>
+                        About Component
+                    </div>;
         }
     });
 });

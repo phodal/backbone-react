@@ -2,7 +2,7 @@
 
 define([
     'react',
-    'mdown!../../info/about.md'
+    'mdown!../../../README.md'
 ], function (React, about) {
     return React.createClass({
         render: function () {
